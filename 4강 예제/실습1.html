@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var info = navigator.userAgent.toLowerCase();
+        var osimg = null;
+        
+        document.write("이미지 없음","<br>");
+
+        if(info.indexOf('window') >= 0){
+            osimg = "windows.png";
+        }else if(info.indexOf('macintosh') >= 0){
+            osimg = "macintosh.png";
+        }else if(info.indexOf('iphone') >= 0){
+            osimg = "iphone.png";
+        }else if(info.indexOf('android') >= 0){
+            osimg = "android.png";
+        }
+
+        document.write("<img src=\"images/" + osimg +"\">","<br>");
+        var scr = screen;
+        var scw = scr.width;
+        var sch = scr.height;
+
+        document.write("모니터 해상도 너비: " + scw + "px","<br>");
+        document.write("모니터 해상도 높이: " + sch + "px","<br>");
+    </script>
+</body>
+</html>
